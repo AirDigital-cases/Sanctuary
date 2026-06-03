@@ -12,4 +12,4 @@ function findAsset(fileName) {
 
 export const sanctuaryLogo = findAsset('sanctuary-logo.png')
 export const sanctuaryAnimation = findAsset('sanctuary-logo-animation.mp4')
-
+export const executiveLoungeStill = findAsset('executive-lounge.png')

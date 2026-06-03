@@ -32,7 +32,6 @@ export default function AccessForm() {
   function handleSubmit(event) {
     event.preventDefault()
 
-    // Future API integration can replace localStorage persistence while preserving this payload shape.
     const request = createAccessRequest(formState)
 
     startTransition(() => {
@@ -47,28 +46,33 @@ export default function AccessForm() {
         <div className="grid gap-8 xl:grid-cols-[0.78fr_1.22fr]">
           <Reveal className="space-y-8">
             <SectionHeading
-              eyebrow="Lista privada"
+              eyebrow="Acesso mediante curadoria"
               title="Solicite seu acesso"
-              description="A curadoria Sanctuary analisa cada solicitação para preservar a atmosfera da experiência."
+              description="A proxima edicao sera limitada a 80 convidados."
             />
 
             <div className="glass-gold space-y-5 p-6 sm:p-7">
+              <p className="max-w-xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
+                A curadoria Sanctuary analisa cada solicitacao para preservar a atmosfera da
+                experiencia.
+              </p>
+
               <div className="grid gap-5 sm:grid-cols-2">
                 <div>
                   <p className="form-label">Formato</p>
-                  <p className="mt-3 text-lg text-platinum">Solicitação privada</p>
+                  <p className="mt-3 text-lg text-platinum">Lista privada</p>
                 </div>
                 <div>
                   <p className="form-label">Capacidade</p>
-                  <p className="mt-3 text-lg text-platinum">80 acessos por edição</p>
+                  <p className="mt-3 text-lg text-platinum">80 convidados por edicao</p>
                 </div>
                 <div>
                   <p className="form-label">Local</p>
-                  <p className="mt-3 text-lg text-platinum">São José dos Pinhais</p>
+                  <p className="mt-3 text-lg text-platinum">Sao Jose dos Pinhais</p>
                 </div>
                 <div>
-                  <p className="form-label">Revelação</p>
-                  <p className="mt-3 text-lg text-platinum">Endereço enviado aos aprovados</p>
+                  <p className="form-label">Contato</p>
+                  <p className="mt-3 text-lg text-platinum">Caso aprovado, nossa equipe entra em contato</p>
                 </div>
               </div>
             </div>
@@ -182,8 +186,8 @@ export default function AccessForm() {
 
               <div className="flex flex-col gap-4 border-t border-[rgba(200,164,93,0.16)] pt-6 sm:flex-row sm:items-center sm:justify-between">
                 <p className="max-w-xl text-sm leading-relaxed text-[#e9ddc7]/46">
-                  Os dados seguem em `localStorage` nesta fase inicial e podem ser conectados a uma API
-                  depois, sem quebrar o fluxo atual.
+                  A curadoria Sanctuary analisa cada solicitacao para preservar a atmosfera da
+                  experiencia.
                 </p>
                 <button type="submit" className="action-button shrink-0">
                   Enviar solicitação
@@ -198,11 +202,11 @@ export default function AccessForm() {
                 className="mt-6 rounded-[28px] border border-[rgba(200,164,93,0.18)] bg-[rgba(200,164,93,0.05)] p-5"
               >
                 <p className="text-lg text-platinum">
-                  Sua solicitação foi recebida. Caso aprovada, nossa curadoria entrará em contato com
-                  seu acesso.
+                  Sua solicitacao foi recebida. Caso aprovada, nossa equipe entrara em contato com seu
+                  acesso.
                 </p>
                 <p className="mt-3 text-sm uppercase tracking-[0.24em] text-[#c8a45d]">
-                  Código de solicitação: {submittedRequest.accessCode}
+                  Codigo de solicitacao: {submittedRequest.accessCode}
                 </p>
               </motion.div>
             ) : null}

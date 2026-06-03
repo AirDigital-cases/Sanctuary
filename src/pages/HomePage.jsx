@@ -26,7 +26,7 @@ export default function HomePage() {
               <SectionHeading
                 eyebrow="Access Pass"
                 title="Um convite privado que parece raro antes mesmo da confirmação."
-                description="O Access Pass traduz a aprovação em objeto visual. Ele já está pronto para evoluir com QR dinâmico, check-in e autenticação quando a API entrar em cena."
+                description="O Access Pass traduz a aprovacao em objeto visual. Um convite pensado para parecer raro, discreto e desejado."
               />
 
               <div className="glass-gold space-y-4 p-6">

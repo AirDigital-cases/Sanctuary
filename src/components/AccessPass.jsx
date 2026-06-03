@@ -65,7 +65,7 @@ export default function AccessPass({ name, edition, date, location, code, status
           <div className="space-y-2">
             <p className="form-label">QR Placeholder</p>
             <p className="text-sm leading-relaxed text-[#e9ddc7]/56">
-              Pronto para token dinâmico e check-in autenticado quando a API estiver ativa.
+              Convite visual reservado para validacao privada antes da chegada.
             </p>
           </div>
 

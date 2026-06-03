@@ -28,8 +28,8 @@ export default function AccessRules() {
         <Reveal>
           <SectionHeading
             eyebrow="Próxima edição"
-            title="80 acessos privados. O restante permanece fora do radar."
-            description="São José dos Pinhais. Lista limitada. Local revelado apenas aos perfis aprovados pela curadoria Sanctuary."
+            title="Uma edicao intima, limitada a 80 convidados, em um ambiente sofisticado preparado para receber quem entende a proposta."
+            description="Sao Jose dos Pinhais. Acesso limitado, lista privada e local revelado apenas aos aprovados."
           />
         </Reveal>
 
@@ -37,14 +37,14 @@ export default function AccessRules() {
           <Reveal className="glass-gold grain-overlay p-7 sm:p-9">
             <div className="space-y-6">
               <p className="editorial-title text-4xl text-platinum sm:text-5xl">
-                Lista limitada.
+                Edicao limitada.
                 <br />
-                Convites definidos por presença, afinidade e atmosfera.
+                Curadoria definida por presenca, afinidade e proposta.
               </p>
 
               <p className="max-w-xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
-                Aqui não existe compra aberta. Existe solicitação, análise e resposta curada. A proposta
-                é manter a energia certa em cada edição exclusiva.
+                Uma noite privada, em um ambiente sofisticado, preparada para receber quem entende a
+                proposta e valoriza musica, ambiente e presenca.
               </p>
 
               <p className="form-label">Acesso sujeito à aprovação da curadoria Sanctuary.</p>
