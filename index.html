@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Sanctuary. Onde cada set conta uma história. Solicite acesso à próxima edição exclusiva."
+    />
+    <title>Sanctuary</title>
+    <script>
+      ;(function (location) {
+        if (!location.search.startsWith('?/')) {
+          return
+        }
+
+        const decoded = location.search
+          .slice(2)
+          .split('&')
+          .map((segment) => segment.replace(/~and~/g, '&'))
+          .join('?')
+
+        const basePath = '/Sanctuary'
+        const normalizedPath = decoded.startsWith('/') ? decoded : `/${decoded}`
+        const nextUrl = `${basePath}${normalizedPath}${location.hash}`
+
+        window.history.replaceState(null, '', nextUrl)
+      })(window.location)
+    </script>
+    <script type="module" crossorigin src="/Sanctuary/assets/index-Bj2bUSl5.js"></script>
+    <link rel="stylesheet" crossorigin href="/Sanctuary/assets/index-D7xmCK7m.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
