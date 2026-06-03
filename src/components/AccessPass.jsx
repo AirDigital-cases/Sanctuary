@@ -12,15 +12,21 @@ const qrPattern = [
 
 export default function AccessPass({ name, edition, date, location, code, status = 'Aprovado' }) {
   return (
-    <div className="surface overflow-hidden">
-      <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.45fr_0.85fr]">
+    <div className="glass-gold grain-overlay overflow-hidden">
+      <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.35fr_0.65fr]">
         <div className="space-y-8">
-          <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-6">
-            <div className="space-y-3">
-              <span className="pill-label">Sanctuary Access Pass</span>
-              <BrandMark showWordmark={false} imageClassName="h-12" />
+          <div className="flex flex-col gap-5 border-b border-[rgba(200,164,93,0.18)] pb-6 sm:flex-row sm:items-start sm:justify-between">
+            <div className="space-y-4">
+              <span className="pill-label">SANCTUARY ACCESS</span>
+              <div className="space-y-2">
+                <BrandMark showWordmark={false} className="h-12 w-12" imageClassName="top-[7%]" />
+                <p className="text-[0.7rem] uppercase tracking-[0.3em] text-[#c8a45d]">
+                  Private Guest
+                </p>
+              </div>
             </div>
-            <div className="rounded-full border border-emerald-300/25 bg-emerald-300/10 px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.25em] text-emerald-100">
+
+            <div className="inline-flex rounded-full border border-[rgba(200,164,93,0.28)] bg-[rgba(200,164,93,0.08)] px-4 py-2 text-[0.62rem] font-semibold uppercase tracking-[0.28em] text-[#e0c17a]">
               {status}
             </div>
           </div>
@@ -44,32 +50,39 @@ export default function AccessPass({ name, edition, date, location, code, status
             </div>
             <div className="sm:col-span-2">
               <p className="form-label">Código</p>
-              <p className="mt-2 text-lg uppercase tracking-[0.28em] text-white/88">{code}</p>
+              <p className="mt-2 text-lg uppercase tracking-[0.34em] text-[#e0c17a]">{code}</p>
             </div>
+          </div>
+
+          <div className="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.26em] text-[#e9ddc7]/44">
+            <span className="h-px flex-1 gold-gradient" />
+            Curadoria Sanctuary
+            <span className="h-px flex-1 gold-gradient" />
           </div>
         </div>
 
-        <div className="flex flex-col items-center justify-between rounded-[24px] border border-dashed border-white/14 bg-black/40 p-6 text-center">
+        <div className="flex flex-col justify-between gap-6 rounded-[28px] border border-[rgba(200,164,93,0.18)] bg-[rgba(3,3,3,0.48)] p-6">
           <div className="space-y-2">
             <p className="form-label">QR Placeholder</p>
-            <p className="text-sm text-white/55">Substituível por token dinâmico quando a API estiver ativa.</p>
+            <p className="text-sm leading-relaxed text-[#e9ddc7]/56">
+              Pronto para token dinâmico e check-in autenticado quando a API estiver ativa.
+            </p>
           </div>
 
-          <div className="grid w-36 grid-cols-7 gap-1 rounded-[22px] border border-white/10 bg-white/[0.04] p-4">
+          <div className="grid w-40 grid-cols-7 gap-1 self-center rounded-[24px] border border-[rgba(200,164,93,0.18)] bg-[rgba(200,164,93,0.04)] p-4">
             {qrPattern.map((cell, index) => (
               <div
                 key={`${cell}-${index}`}
-                className={`aspect-square rounded-[2px] ${cell ? 'bg-white/90' : 'bg-white/10'}`}
+                className={`aspect-square rounded-[2px] ${cell ? 'bg-[#e0c17a]' : 'bg-[rgba(200,164,93,0.12)]'}`}
               />
             ))}
           </div>
 
-          <p className="text-[0.68rem] uppercase tracking-[0.24em] text-white/42">
-            Curadoria Sanctuary
+          <p className="text-[0.7rem] uppercase tracking-[0.24em] text-[#c8a45d]">
+            Local revelado aos aprovados
           </p>
         </div>
       </div>
     </div>
   )
 }
-

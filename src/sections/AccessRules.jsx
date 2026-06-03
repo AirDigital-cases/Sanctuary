@@ -2,51 +2,60 @@ import { accessConfig } from '../config/accessConfig'
 import Reveal from '../components/ui/Reveal'
 import SectionHeading from '../components/ui/SectionHeading'
 
-const ruleCards = [
+const editionDetails = [
   {
-    label: 'Formato atual',
-    value: accessConfig.mode === 'invite_only' ? 'Solicitação privada de acesso' : 'Configuração flexível',
+    label: 'Cidade',
+    value: 'São José dos Pinhais',
   },
   {
-    label: 'Diretriz da edição',
-    value: accessConfig.maleRule,
+    label: 'Capacidade',
+    value: '80 acessos privados',
   },
   {
-    label: 'Curadoria da edição',
-    value: accessConfig.femaleRule,
+    label: 'Local',
+    value: 'Revelado somente aos aprovados',
+  },
+  {
+    label: 'Formato',
+    value: accessConfig.mode === 'invite_only' ? 'Acesso por curadoria' : 'Configuração flexível',
   },
 ]
 
 export default function AccessRules() {
   return (
-    <section className="py-24 sm:py-28">
+    <section className="py-24 sm:py-28 lg:py-32">
       <div className="section-shell space-y-12">
         <Reveal>
           <SectionHeading
-            eyebrow="Acesso"
-            title="Acesso sujeito à aprovação da curadoria Sanctuary."
-            description="A estrutura abaixo já está preparada para ativar regras futuras por perfil, mesa, camarote ou áreas premium sem alterar a experiência principal."
+            eyebrow="Próxima edição"
+            title="80 acessos privados. O restante permanece fora do radar."
+            description="São José dos Pinhais. Lista limitada. Local revelado apenas aos perfis aprovados pela curadoria Sanctuary."
           />
         </Reveal>
 
-        <div className="grid gap-5 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal className="surface p-7 sm:p-8">
-            <div className="space-y-5">
-              <span className="pill-label">Lista limitada</span>
-              <p className="text-2xl leading-tight text-platinum sm:text-[2rem]">
-                Cada solicitação entra em análise para preservar a atmosfera, o conforto e o encontro entre pessoas certas.
+        <div className="grid gap-5 xl:grid-cols-[0.95fr_1.05fr]">
+          <Reveal className="glass-gold grain-overlay p-7 sm:p-9">
+            <div className="space-y-6">
+              <p className="editorial-title text-4xl text-platinum sm:text-5xl">
+                Lista limitada.
+                <br />
+                Convites definidos por presença, afinidade e atmosfera.
               </p>
-              <p className="subtle-copy">
-                Nesta fase inicial, não há venda pública. O contato acontece apenas quando a curadoria aprova o acesso para a edição correspondente.
+
+              <p className="max-w-xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
+                Aqui não existe compra aberta. Existe solicitação, análise e resposta curada. A proposta
+                é manter a energia certa em cada edição exclusiva.
               </p>
+
+              <p className="form-label">Acesso sujeito à aprovação da curadoria Sanctuary.</p>
             </div>
           </Reveal>
 
-          <div className="grid gap-5">
-            {ruleCards.map((item, index) => (
-              <Reveal key={item.label} delay={index * 0.08} className="surface p-6">
+          <div className="grid gap-5 sm:grid-cols-2">
+            {editionDetails.map((item, index) => (
+              <Reveal key={item.label} delay={index * 0.08} className="glass-gold p-6 sm:p-7">
                 <p className="form-label">{item.label}</p>
-                <p className="mt-3 text-lg leading-relaxed text-white/76">{item.value}</p>
+                <p className="mt-4 text-2xl leading-tight text-platinum">{item.value}</p>
               </Reveal>
             ))}
           </div>
@@ -55,4 +64,3 @@ export default function AccessRules() {
     </section>
   )
 }
-

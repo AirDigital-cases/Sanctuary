@@ -1,9 +1,8 @@
 export const passPreview = {
-  name: 'Convidado Sanctuary',
-  edition: 'Sanctuary 001',
-  date: '12 Setembro 2026',
-  location: 'São Paulo, BR',
-  code: 'SANC-01A9XP',
+  name: 'Private Guest',
+  edition: 'Sanctuary Private 001',
+  date: '27 Setembro 2026',
+  location: 'Local revelado aos aprovados',
+  code: 'SANC-80AURA',
   status: 'Aprovado',
 }
-

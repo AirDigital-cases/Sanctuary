@@ -6,43 +6,29 @@ export default function BrandMark({
   textClassName = '',
   showWordmark = true,
 }) {
-  if (sanctuaryLogo && showWordmark) {
-    return (
-      <div className={`flex items-center gap-3 ${className}`.trim()}>
-        <div className="relative h-11 w-11 overflow-hidden rounded-full border border-white/14 bg-white/[0.03] shadow-glow">
-          <img
-            src={sanctuaryLogo}
-            alt="Sanctuary"
-            className={`absolute left-1/2 top-[16%] h-[158%] w-[158%] max-w-none -translate-x-1/2 -translate-y-[16%] object-cover ${imageClassName}`.trim()}
-          />
-        </div>
-
-        <span
-          className={`text-xs font-medium uppercase tracking-[0.42em] text-white/72 ${textClassName}`.trim()}
-        >
-          SANCTUARY
-        </span>
-      </div>
-    )
-  }
+  const frameClassName = showWordmark ? 'h-10 w-10' : 'h-12 w-12'
 
   return (
     <div className={`flex items-center gap-3 ${className}`.trim()}>
       {sanctuaryLogo ? (
-        <img
-          src={sanctuaryLogo}
-          alt="Sanctuary"
-          className={`h-10 w-auto object-contain ${imageClassName}`.trim()}
-        />
+        <div className={`relative shrink-0 overflow-hidden ${frameClassName}`.trim()}>
+          <img
+            src={sanctuaryLogo}
+            alt="Sanctuary"
+            className={`brand-mark-gold absolute left-1/2 top-[6%] h-[205%] w-[205%] max-w-none -translate-x-1/2 object-cover object-top ${imageClassName}`.trim()}
+          />
+        </div>
       ) : (
-        <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/[0.03] text-sm tracking-[0.3em] text-white/75">
+        <div
+          className={`flex shrink-0 items-center justify-center border border-[rgba(200,164,93,0.3)] bg-[rgba(200,164,93,0.05)] text-sm tracking-[0.3em] text-[#e0c17a] ${frameClassName}`.trim()}
+        >
           S
         </div>
       )}
 
-      {showWordmark && !sanctuaryLogo ? (
+      {showWordmark ? (
         <span
-          className={`text-xs font-medium uppercase tracking-[0.42em] text-white/72 ${textClassName}`.trim()}
+          className={`text-[0.72rem] font-medium uppercase tracking-[0.46em] text-[#e9ddc7] ${textClassName}`.trim()}
         >
           SANCTUARY
         </span>

@@ -1,97 +1,75 @@
 import { motion } from 'framer-motion'
-import { useState } from 'react'
-import BrandMark from '../components/BrandMark'
-import { sanctuaryAnimation, sanctuaryLogo } from '../lib/brandAssets'
-
-const soundDirections = ['Afro House', 'Organic House', 'Progressive House']
+import { sanctuaryLogo } from '../lib/brandAssets'
 
 export default function Hero() {
-  const [showVideo, setShowVideo] = useState(Boolean(sanctuaryAnimation))
-
   return (
-    <section id="top" className="relative overflow-hidden bg-black">
-      <div className="absolute inset-0 bg-vignette opacity-70" />
-      <div className="absolute inset-x-0 top-0 h-[28rem] bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08),transparent_58%)]" />
+    <section id="top" className="relative overflow-hidden bg-obsidian">
+      <div className="absolute inset-0 organic-bg" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(224,193,122,0.08),transparent_18%),linear-gradient(180deg,rgba(3,3,3,0.2),rgba(3,3,3,0.92))]" />
+      <div className="grain-overlay absolute inset-0" />
 
-      <div className="section-shell relative flex min-h-[calc(100vh-4.5rem)] items-center py-16 sm:py-20 lg:py-28">
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-8 text-center sm:gap-10">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+      <div className="section-shell relative flex min-h-screen items-center justify-center py-28 sm:py-32">
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="surface flex w-full max-w-[22rem] flex-col items-center justify-center overflow-hidden bg-black/80 p-6 sm:max-w-[30rem] sm:p-8"
+            className="pill-label"
           >
-            {showVideo ? (
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="auto"
-                poster={sanctuaryLogo ?? undefined}
-                className="mx-auto h-auto max-h-[18rem] w-full object-contain sm:max-h-[24rem]"
-                onError={() => setShowVideo(false)}
-              >
-                <source src={sanctuaryAnimation} type="video/mp4" />
-              </video>
-            ) : sanctuaryLogo ? (
-              <img
-                src={sanctuaryLogo}
-                alt="Sanctuary"
-                className="mx-auto h-auto max-h-[18rem] w-full object-contain sm:max-h-[24rem]"
-              />
+            Lista privada • 80 acessos por edição
+          </motion.span>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0.94 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-10"
+          >
+            {sanctuaryLogo ? (
+              <div className="relative mx-auto h-24 w-24 overflow-hidden sm:h-28 sm:w-28 lg:h-36 lg:w-36">
+                <img
+                  src={sanctuaryLogo}
+                  alt="Sanctuary"
+                  className="brand-mark-gold absolute left-1/2 top-[7%] h-[210%] w-[210%] max-w-none -translate-x-1/2 object-cover object-top"
+                />
+              </div>
             ) : (
-              <BrandMark
-                className="justify-center"
-                imageClassName="h-16"
-                textClassName="text-sm tracking-[0.6em]"
-              />
+              <div className="mx-auto flex h-24 w-24 items-center justify-center border border-[rgba(200,164,93,0.3)] text-4xl text-[#e0c17a] sm:h-28 sm:w-28 lg:h-36 lg:w-36 lg:text-5xl">
+                S
+              </div>
             )}
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="space-y-7"
+            transition={{ duration: 1.05, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-10 space-y-6"
           >
-            <span className="pill-label">Edição exclusiva</span>
-            <div className="space-y-5">
-              <h1 className="text-6xl font-semibold leading-none text-platinum sm:text-7xl lg:text-[6.5rem]">
-                SANCTUARY
-              </h1>
-              <p className="text-xl font-light text-white/76 sm:text-2xl lg:text-[1.85rem]">
-                Onde cada set conta uma história.
-              </p>
-            </div>
-
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-white/60 sm:text-lg">
-              Uma experiência premium de música eletrônica criada para pessoas selecionadas.
+            <h1 className="editorial-title gold-gradient-text text-[3.7rem] sm:text-[5.5rem] lg:text-[7.4rem]">
+              SANCTUARY
+            </h1>
+            <p className="text-lg font-light text-[#e9ddc7] sm:text-2xl lg:text-[1.9rem]">
+              Onde cada set conta uma história.
             </p>
-
-            <div className="flex flex-col justify-center gap-4 sm:flex-row">
-              <a href="#access" className="action-button">
-                Solicitar acesso
-              </a>
-              <a href="#experience" className="secondary-button">
-                Entender a experiência
-              </a>
-            </div>
+            <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
+              Uma experiência privada entre música, atmosfera e pertencimento.
+            </p>
           </motion.div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            {soundDirections.map((item, index) => (
-              <motion.span
-                key={item}
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.65, delay: 0.3 + index * 0.1 }}
-                className="rounded-full border border-white/10 px-4 py-2 text-[0.7rem] uppercase tracking-[0.28em] text-white/55"
-              >
-                {item}
-              </motion.span>
-            ))}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.95, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-10 flex w-full max-w-xl flex-col justify-center gap-4 sm:flex-row"
+          >
+            <a href="#access" className="action-button w-full sm:w-auto">
+              Entrar na lista privada
+            </a>
+            <a href="#experience" className="secondary-button w-full sm:w-auto">
+              Conhecer a experiência
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

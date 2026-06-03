@@ -18,20 +18,22 @@ export default function HomePage() {
         <Hero />
         <ConceptSection />
         <ExperienceSection />
+        <AccessRules />
 
-        <section className="py-24 sm:py-28">
-          <div className="section-shell grid gap-10 xl:grid-cols-[0.92fr_1.08fr] xl:items-center">
+        <section className="py-24 sm:py-28 lg:py-32">
+          <div className="section-shell grid gap-10 xl:grid-cols-[0.84fr_1.16fr] xl:items-center">
             <Reveal className="space-y-8">
               <SectionHeading
                 eyebrow="Access Pass"
-                title="Um convite desenhado para parecer raro antes mesmo da entrada."
-                description="O Access Pass funciona como extensão da identidade Sanctuary e está pronto para receber QR dinâmico, dados da edição e confirmação de acesso via API."
+                title="Um convite privado que parece raro antes mesmo da confirmação."
+                description="O Access Pass traduz a aprovação em objeto visual. Ele já está pronto para evoluir com QR dinâmico, check-in e autenticação quando a API entrar em cena."
               />
 
-              <div className="surface space-y-4 p-6">
+              <div className="glass-gold space-y-4 p-6">
                 <p className="form-label">Preview visual</p>
-                <p className="subtle-copy">
-                  A aprovação pode evoluir para um fluxo completo com token autenticado, QR real, check-in e atualizações por status sem refazer a interface.
+                <p className="text-base leading-relaxed text-[#e9ddc7]/62">
+                  Não é um ingresso comum. É um sinal de acesso, status e pertencimento à edição
+                  privada.
                 </p>
               </div>
             </Reveal>
@@ -41,12 +43,9 @@ export default function HomePage() {
             </Reveal>
           </div>
         </section>
-
-        <AccessRules />
         <AccessForm />
       </main>
       <Footer />
     </div>
   )
 }
-

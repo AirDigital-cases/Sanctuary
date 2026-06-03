@@ -5,14 +5,15 @@ export default function SectionHeading({ eyebrow, title, description, align = 'l
     <div className={`space-y-5 ${alignment}`.trim()}>
       {eyebrow ? <span className="pill-label">{eyebrow}</span> : null}
       <div className="space-y-4">
-        <h2 className="text-4xl font-semibold leading-none text-platinum sm:text-5xl lg:text-6xl">
+        <h2 className="editorial-title text-4xl text-platinum sm:text-5xl lg:text-[4rem]">
           {title}
         </h2>
         {description ? (
-          <p className="text-base leading-relaxed text-white/62 sm:text-lg">{description}</p>
+          <p className="max-w-2xl text-base leading-relaxed text-[#e9ddc7]/66 sm:text-lg">
+            {description}
+          </p>
         ) : null}
       </div>
     </div>
   )
 }
-
