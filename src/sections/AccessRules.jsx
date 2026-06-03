@@ -16,8 +16,8 @@ const editionDetails = [
     value: 'Revelado somente aos aprovados',
   },
   {
-    label: 'Formato',
-    value: accessConfig.mode === 'invite_only' ? 'Acesso por curadoria' : 'Configuração flexível',
+    label: 'Convite',
+    value: accessConfig.mode === 'invite_only' ? 'Lista mediante convite' : 'Configuração flexível',
   },
 ]
 
@@ -28,8 +28,8 @@ export default function AccessRules() {
         <Reveal>
           <SectionHeading
             eyebrow="Próxima edição"
-            title="Uma edicao intima, limitada a 80 convidados, em um ambiente sofisticado preparado para receber quem entende a proposta."
-            description="Sao Jose dos Pinhais. Acesso limitado, lista privada e local revelado apenas aos aprovados."
+            title="Uma edição íntima. 80 convidados. Local revelado aos aprovados."
+            description=""
           />
         </Reveal>
 
@@ -37,14 +37,14 @@ export default function AccessRules() {
           <Reveal className="glass-gold grain-overlay p-7 sm:p-9">
             <div className="space-y-6">
               <p className="editorial-title text-4xl text-platinum sm:text-5xl">
-                Edicao limitada.
+                Noite privada.
                 <br />
-                Curadoria definida por presenca, afinidade e proposta.
+                Convite para poucos.
               </p>
 
               <p className="max-w-xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
-                Uma noite privada, em um ambiente sofisticado, preparada para receber quem entende a
-                proposta e valoriza musica, ambiente e presenca.
+                Uma edição íntima, limitada a 80 convidados, em um ambiente sofisticado preparado
+                para receber quem entende a proposta.
               </p>
 
               <p className="form-label">Acesso sujeito à aprovação da curadoria Sanctuary.</p>

@@ -10,18 +10,19 @@ export default function ConceptSection() {
           <div className="grid gap-10 xl:grid-cols-[1.2fr_0.8fr] xl:items-end">
             <div className="space-y-6">
               <h2 className="editorial-title max-w-4xl text-5xl text-platinum sm:text-6xl lg:text-[5.3rem]">
-                Não criamos festas.
+                NEM TODOS SERÃO
                 <br />
-                Criamos memórias.
+                CONVIDADOS.
               </h2>
             </div>
 
             <div className="space-y-6 xl:pl-10">
               <span className="block h-px w-24 gold-gradient" />
               <p className="max-w-xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
-                Sanctuary nasce para pessoas que valorizam música, atmosfera, estética e pertencimento.
-                Cada edição é pensada como um ritual. Cada encontro é curado. Cada set conta uma
-                história.
+                Sanctuary é uma experiência privada criada para um círculo seleto.
+              </p>
+              <p className="text-sm uppercase tracking-[0.28em] text-[#e9ddc7]/52">
+                Onde cada set conta uma história.
               </p>
             </div>
           </div>

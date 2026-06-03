@@ -25,16 +25,13 @@ export default function HomePage() {
             <Reveal className="space-y-8">
               <SectionHeading
                 eyebrow="Access Pass"
-                title="Um convite privado que parece raro antes mesmo da confirmação."
-                description="O Access Pass traduz a aprovacao em objeto visual. Um convite pensado para parecer raro, discreto e desejado."
+                title="Um convite que não parece comum."
+                description="Enviado apenas aos aprovados."
               />
 
               <div className="glass-gold space-y-4 p-6">
                 <p className="form-label">Preview visual</p>
-                <p className="text-base leading-relaxed text-[#e9ddc7]/62">
-                  Não é um ingresso comum. É um sinal de acesso, status e pertencimento à edição
-                  privada.
-                </p>
+                <p className="text-base leading-relaxed text-[#e9ddc7]/62">Discreto. Raro. Direto.</p>
               </div>
             </Reveal>
 

@@ -1,26 +1,26 @@
 export const experienceItems = [
   {
     title: 'ATMOSFERA',
-    description: 'Luz baixa, estetica quente e uma energia construida nos detalhes.',
+    description: 'Luz quente, som envolvente e presença.',
   },
   {
     title: 'AFRO HOUSE',
-    description: 'Sets que conduzem a noite com elegancia, ritmo e presenca.',
-  },
-  {
-    title: 'LOUNGE',
-    description: 'Um ambiente sofisticado, intimista e feito para ser vivido de perto.',
-  },
-  {
-    title: 'CURADORIA',
-    description: 'Acesso selecionado para manter a energia certa em cada edicao.',
-  },
-  {
-    title: 'STATUS',
-    description: 'Nao e sobre volume. E sobre estar no lugar certo, com as pessoas certas.',
+    description: 'Sets criados para conduzir a noite.',
   },
   {
     title: 'PRIVATE LIST',
-    description: 'A entrada acontece por solicitacao, indicacao e aprovacao da curadoria.',
+    description: 'Apenas 80 convidados por edição.',
+  },
+  {
+    title: 'STATUS',
+    description: 'Algumas experiências não precisam ser explicadas.',
+  },
+  {
+    title: 'LOUNGE',
+    description: 'Um ambiente sofisticado, íntimo e vivo.',
+  },
+  {
+    title: 'MEMÓRIA',
+    description: 'O tipo de noite que fica.',
   },
 ]

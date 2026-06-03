@@ -16,7 +16,7 @@ export default function Hero() {
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="pill-label"
           >
-            Lista privada • 80 acessos por edição
+            Lista privada • 80 convidados
           </motion.span>
 
           <motion.div
@@ -50,10 +50,10 @@ export default function Hero() {
               SANCTUARY
             </h1>
             <p className="text-lg font-light text-[#e9ddc7] sm:text-2xl lg:text-[1.9rem]">
-              Onde cada set conta uma história.
+              Uma noite para poucos.
             </p>
-            <p className="mx-auto max-w-2xl text-base leading-relaxed text-[#e9ddc7]/64 sm:text-lg">
-              Uma experiência privada entre música, atmosfera e pertencimento.
+            <p className="mx-auto max-w-2xl text-sm uppercase tracking-[0.28em] text-[#e9ddc7]/54 sm:text-[0.82rem]">
+              Onde cada set conta uma história.
             </p>
           </motion.div>
 
@@ -64,10 +64,10 @@ export default function Hero() {
             className="mt-10 flex w-full max-w-xl flex-col justify-center gap-4 sm:flex-row"
           >
             <a href="#access" className="action-button w-full sm:w-auto">
-              Entrar na lista privada
+              Solicitar convite
             </a>
-            <a href="#experience" className="secondary-button w-full sm:w-auto">
-              Conhecer a experiência
+            <a href="#access" className="secondary-button w-full sm:w-auto">
+              A lista privada
             </a>
           </motion.div>
         </div>

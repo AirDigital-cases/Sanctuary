@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="space-y-3">
           <BrandMark />
           <p className="max-w-md text-sm text-[#e9ddc7]/44">
-            Onde cada set conta uma história. Lista privada, curadoria de acesso e uma atmosfera desenhada para permanecer na memória.
+            Onde cada set conta uma história.
           </p>
         </div>
 
